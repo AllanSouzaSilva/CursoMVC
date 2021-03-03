@@ -1,3 +1,4 @@
+using CursoMVC.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -24,6 +25,7 @@ namespace CursoMVC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddDbContext<Context>(); //Estou mostrando para a startap minha classe de conexão
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
