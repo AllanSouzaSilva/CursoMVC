@@ -19,6 +19,9 @@ namespace CursoMVC.Models
 
             optionsBuilder.UseSqlServer(connectionString: @"Server=ALLAN-DEVELOPME\SQLEXPRESS;Initial Catalog=CursoMVC;Integrated Security=True");//Aqui aonde vai a string de conexão
         }
-
+        public virtual void SetModified(object entity) //Seta os estado da entidade para o metodo modificado
+        {
+            Entry(entity).State = EntityState.Modified;
+        }
     }
 }
